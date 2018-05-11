@@ -19,8 +19,11 @@ public class PaintActivity extends Activity {
         setContentView(paintView);
 
         int color = getIntent().getExtras().getInt("color");
+        int size = getIntent().getExtras().getInt("size");
         Log.d(TAG,"color : " + color);
         paintView.setColor(getResources().getColor(color));
+        paintView.setSize(size);
+        Log.d(TAG,"size : " + size);
 
         gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener()
         {

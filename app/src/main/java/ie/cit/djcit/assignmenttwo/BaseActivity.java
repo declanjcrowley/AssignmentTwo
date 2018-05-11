@@ -37,15 +37,16 @@ public class BaseActivity extends AppCompatActivity implements NotificationFragm
     int eventFlag = 0;
 
     private SeekBar seekBar;
+    private int size;
+
+
     private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         LayoutInflater inflater = getLayoutInflater();
         setContentView(R.layout.activity_base);
-
 
         gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener()
         {
@@ -54,6 +55,7 @@ public class BaseActivity extends AppCompatActivity implements NotificationFragm
                 Intent intentsa = new Intent(getApplicationContext(), PaintActivity.class);
                 int color = setTgglBtnColor( tgglBtn.isChecked() );
                 intentsa.putExtra("color", color);
+                intentsa.putExtra("size", size);
                 startActivity(intentsa);
                 finish();
                 return true;
@@ -116,6 +118,7 @@ public class BaseActivity extends AppCompatActivity implements NotificationFragm
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
+                size = progressChangedValue;
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -171,6 +174,7 @@ public class BaseActivity extends AppCompatActivity implements NotificationFragm
                 Intent intentsa = new Intent(getApplicationContext(), PaintActivity.class);
                 int color = setTgglBtnColor( tgglBtn.isChecked() );
                 intentsa.putExtra("color", color);
+                intentsa.putExtra("size", size);
                 startActivity(intentsa);
                 finish();
                 return true;

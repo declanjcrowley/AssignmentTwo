@@ -24,12 +24,14 @@ public class PaintView extends View {
     @Override
     public void onDraw(Canvas canvas){
         super.onDraw(canvas);
-        Log.d(TAG, "BV.onDraw " + getColor());
+        Log.d(TAG, "BV.onDraw c " + getColor());
+        Log.d(TAG, "BV.onDraw r " + r);
         mPaint.setColor( getColor() );
         canvas.drawCircle(x,y,r,mPaint);
     }
 
     public void setColor(int c){color = c;}
+    public void setSize(int c){r = c*10;}
 
     public int getColor(){return color;}
 }
