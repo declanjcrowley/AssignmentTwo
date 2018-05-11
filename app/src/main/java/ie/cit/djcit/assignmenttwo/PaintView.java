@@ -11,8 +11,8 @@ import android.view.View;
 public class PaintView extends View {
 
     String TAG = "test";
-    int x = 10;
-    int y = 10;
+    int x = 400;
+    int y = 400;
     int r = 400;
     Paint mPaint = new Paint();
     private int color = 0;
@@ -31,7 +31,7 @@ public class PaintView extends View {
     }
 
     public void setColor(int c){color = c;}
-    public void setSize(int c){r = c*10;}
+    public void setSize(int c){r = c*10 + 10;}
 
     public int getColor(){return color;}
 }

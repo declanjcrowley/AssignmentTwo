@@ -7,9 +7,9 @@
     <item
         android:id="@+id/two"
         android:orderInCategory="104"
-        android:title="@string/polygon"/>
+        android:title="@string/unused"/>
     <item
         android:id="@+id/three"
         android:orderInCategory="105"
-        android:title="@string/ok"/>
+        android:title="@string/unused"/>
 </menu>
