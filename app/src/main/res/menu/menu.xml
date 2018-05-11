@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
-        android:id="@+id/one"
+        android:id="@+id/paint"
         android:orderInCategory="101"
-        android:title="@string/line"/>
+        android:title="@string/paint_activity"/>
     <item
         android:id="@+id/two"
         android:orderInCategory="104"

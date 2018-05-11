@@ -68,12 +68,21 @@
         android:shadowDy="5"
         android:shadowRadius="5"/>
 
+
     <SeekBar
         android:id="@+id/simpleSeekBar"
-        android:layout_width="fill_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:max="100"
         android:layout_below="@+id/bttnLine"
         android:layout_marginTop="2dp"
         android:layout_marginLeft="30dp"/>
+
+    <ToggleButton
+        android:id="@+id/tgglBtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/simpleSeekBar"
+        android:textOn="red"
+        android:textOff="green"/>
 </RelativeLayout>
