@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
-        android:id="@+id/action_open_kml"
+        android:id="@+id/one"
         android:orderInCategory="101"
-        android:title="@string/line"
-        android:onClick="onClickMenu"/>
+        android:title="@string/line"/>
     <item
-        android:id="@+id/statusActivity"
+        android:id="@+id/two"
         android:orderInCategory="104"
-        android:title="@string/polygon"
-        android:onClick="onClickMenu"/>
+        android:title="@string/polygon"/>
     <item
-        android:id="@+id/cutinstruction"
+        android:id="@+id/three"
         android:orderInCategory="105"
-        android:title="@string/ok"
-        android:onClick="onClickMenu"/>
+        android:title="@string/ok"/>
 </menu>

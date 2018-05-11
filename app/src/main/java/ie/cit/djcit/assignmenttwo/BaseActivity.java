@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -122,15 +124,25 @@ public class BaseActivity extends AppCompatActivity implements NotificationFragm
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
         android.util.Log.d(TAG, "BA.onCreateOptionsMenu");
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
-
-    public void onClickMenu(Menu m) {
-        android.util.Log.d(TAG, "BA.onClickMenu");
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        android.util.Log.d(TAG, "BA.onOptionsSelected");
+        switch (item.getItemId()) {
+            case R.id.one:
+                return true;
+            case R.id.two:
+                return true;
+            case R.id.three:
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
-
 
 
     @Override
