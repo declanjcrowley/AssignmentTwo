@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="5dp"
+    android:weightSum="3"
+    android:background="@color/coolGreen"
+    android:scaleType="fitXY"
+    android:id="@+id/break_list_window">
+
+
+    <TextView
+        android:textColor="#f30707"
+        android:shadowRadius="5"
+        android:shadowColor="#A8A8A8"
+        android:layout_width="1200dp"
+        android:layout_height="120dp"
+        android:text="@string/ok"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="85sp"
+        android:drawableEnd="@drawable/alert_btn"
+        android:drawableRight="@drawable/alert_btn"
+        />
+
+    <ListView
+        android:id="@+id/listid"
+        android:layout_width="1200dp"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

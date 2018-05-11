@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AssignmentTwo</string>
+    <string name="ok">OK</string>
+    <string name="line">line</string>
+    <string name="polygon">polygon</string>
+    <string name="finish">finish</string>
+    <string name="listtitle">list title</string>
 </resources>

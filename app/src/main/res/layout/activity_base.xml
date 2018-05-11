@@ -1,18 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapView1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="ie.cit.djcit.assignmenttwo.BaseActivity">
+    android:layout_height="match_parent" >
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Hello World!"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/alertBtn"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="onClickAlertBtn"
+        android:src="@drawable/alert_btn"
+        android:background="@android:color/transparent"  />
+
+    <ImageButton
+        android:id="@+id/workPauseButton"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="onClickAlertBtn"
+        android:src="@drawable/alert_btn"
+        android:background="@android:color/transparent"  />
+
+
+    <Button
+        android:id="@+id/bttnPolygon"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/workPauseButton"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/polygon"
+        android:background="@drawable/polygon_btn"
+        android:textColor="#ffffff"
+        android:shadowColor="@color/black"
+        android:shadowDx="-2"
+        android:shadowDy="5"
+        android:shadowRadius="5"/>
+
+    <Button
+        android:id="@+id/bttnLine"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/bttnPolygon"
+        android:text="@string/line"
+        android:background="@drawable/line_btn"
+        android:textColor="#ffffff"
+        android:shadowColor="@color/black"
+        android:shadowDx="-2"
+        android:shadowDy="5"
+        android:shadowRadius="5"/>
+
+    <SeekBar
+        android:id="@+id/simpleSeekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_below="@+id/bttnLine"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="30dp"/>
+</RelativeLayout>
